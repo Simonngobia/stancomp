@@ -1,0 +1,605 @@
+/* Basic Reset & Body Styling */
+body, h1, h2, h3, h4, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Choose a font similar to the image */
+}
+
+body {
+    line-height: 1.6;
+    background: url('images/10672.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff; /* White header background */
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.header-flex .logo {
+    flex: 0 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 40px;
+}
+
+.header-flex nav ul {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.logo {
+    color: #007bff; /* Example primary color */
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-button:hover, .nav-button.active {
+    color: #007bff; /* Highlight color on hover/active */
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* Sections Styling */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #343a40;
+}
+
+.section h3 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: #495057;
+}
+
+.section p {
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("pexels-jessbaileydesign-876467.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Optional: makes text readable on dark images */
+    min-height: 350px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: #fff3e0; /* Light orange/peach background */
+    padding: 40px 0;
+}
+
+/* Category & Product Grid */
+.category-section {
+    background-color: #ffffff;
+}
+
+.product-scroll-container {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.product-grid.horizontal-scroll {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    min-width: 600px; /* Adjust as needed */
+}
+
+.product-grid.horizontal-scroll .product-card {
+    min-width: 220px; /* Adjust card width as needed */
+    flex: 0 0 auto;
+}
+
+.product-card {
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    min-width: 180px;
+    max-width: 220px;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.product-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+    margin-bottom: 10px;
+}
+
+.product-scroll-container.rtl-scroll {
+    overflow-x: auto;
+    direction: rtl;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.product-scroll-container.rtl-scroll .horizontal-scroll {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    min-width: 600px;
+}
+
+.tvs-grid {
+    display: flex;
+    flex-direction: row;      /* Arrange items horizontally */
+    justify-content: center;  /* Center the row */
+    align-items: flex-start;  /* Align items to the top */
+    gap: 30px;                /* Space between cards */
+    margin-top: 30px;
+}
+
+.tvs-grid .product-card {
+    min-width: 180px;
+    max-width: 220px;
+}
+
+/* Testimonials */
+.featured-products-section { /* Renamed from "Why Our Clients Love Us" for electronics context */
+    background-color: #e9ecef; /* Light grey */
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column; /* Stack testimonials or use grid */
+    gap: 20px;
+}
+.testimonial {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff;
+}
+
+
+/* Resources Section */
+.resources-section {
+    background-color: #fff;
+}
+.resource-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.resource-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.resource-links a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 24px 32px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1em;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    min-width: 160px;
+}
+
+.resource-card:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.resource-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+.faq-list {
+    position: relative;
+    background: url('images/faq.jpeg') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    flex: 1 1 45%;
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.faq-list::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    z-index: 0;
+    /* background removed for full transparency */
+}
+
+.faq-list > * {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-image {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    background: #5be46e;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 1.1em;
+    color: #007bff;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.faq-question.active,
+.faq-question:hover {
+    background: #e9ecef;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+    padding: 0 20px;
+}
+
+.faq-question.active + .faq-answer {
+    padding: 15px 20px;
+}
+
+.faq-support-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.faq-list, .support-contact-section {
+    flex: 1 1 45%;
+    min-width: 500px;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .faq-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .faq-support-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Support Contact Section */
+.support-contact-section {
+    position: relative;
+    background: url('images/support b.jpg') no-repeat center center, #3af7d7; /* fallback color */
+    background-size: cover;
+    border: 2px solid #009688;
+    border-radius: 10px;
+    padding: 30px 20px;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    flex: 1 1 45%;
+    min-width: 300px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.support-contact-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3); /* semi-transparent dark overlay */
+    border-radius: 10px;
+    z-index: 0;
+}
+.support-contact-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.support-contact-section h2,
+.support-contact-section p {
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark footer */
+    color: #f8f9fa;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative;
+}
+
+.footer-columns div {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Accessory Slide */
+.accessory-slide {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 6px 6px 0 0;
+}
+.product-card .accessory-slide.active {
+    opacity: 1;
+    z-index: 1;
+    display: block;
+}
+
+/* Partners Bar */
+.partners-bar {
+    background: #f7f7f5;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.partners-container {
+    background: #fff;
+    border-radius: 48px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 40px;
+    flex-wrap: wrap;
+}
+
+.partners-title {
+    color: #18404a;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-right: 20px;
+    min-width: 120px;
+}
+
+.partner-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.partner-link:hover {
+    transform: scale(1.08);
+}
+
+.partner-logo {
+    height: 48px;      /* Set all logos to the same height */
+    width: 120px;      /* Set a fixed width for consistency */
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+    background: transparent;
+    margin: 0 10px;
+}
+
+.partner-link:hover .partner-logo {
+    filter: grayscale(0%);
+}
+
+/* Footer Social Links */
+.footer-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Responsive: center on small screens */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap; /* Allow nav items to wrap on small screens */
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px;
+    }
+    .footer-columns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+#accessories .product-grid {
+    display: flex;
+    flex-direction: row-reverse; /* Arrange cards from right to left */
+    justify-content: center;
+    gap: 30px;
+}
+
+.accessories-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
